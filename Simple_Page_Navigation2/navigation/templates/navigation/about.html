@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Page Navigation</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      padding-top: 60px; /* Adds space to prevent content from being hidden under the fixed navbar */
+    }
+
+    /* Fixed Header and Navigation */
+    header {
+      background-color: #333;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000; /* Ensures the navbar is always on top */
+    }
+
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #f4f4f4;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h1, section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px; /* Added margin for spacing */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/navigation/about">About</a></li>
+        <li><a href="/navigation/services">Services</a></li>
+        <li><a href="/navigation/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Learn more about our company and team.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Simple Page Navigation. All Rights Reserved.</p>
+    <p>Developed by Jabed Hosen</p>
+  </footer>
+</body>
+</html>
