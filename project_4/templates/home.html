@@ -1,0 +1,37 @@
+
+{% extends "base.html" %} {% block content %}
+{{block.super}}
+{% load static %}
+<!-- Header -->
+<header>
+  <h1>Image Gallery</h1>
+</header>
+
+<!-- Gallery Section -->
+<section class="gallery">
+  <div class="gallery-item">
+    <img src="{% static 'bird1.jpg'%}" alt="Bird Image 1" />
+    <div class="caption">Bird in Flight</div>
+  </div>
+  <div class="gallery-item">
+    <img src="{% static 'bird2.jpg'%}" alt="Bird Image 2" />
+    <div class="caption">Majestic Birds</div>
+  </div>
+  <div class="gallery-item">
+    <img src="{% static 'bird3.jpg'%}" alt="Bird Image 3" />
+    <div class="caption">Bird on Tree</div>
+  </div>
+  <div class="gallery-item">
+    <img src="{% static 'bird4.jpg'%}" alt="Bird Image 4" />
+    <div class="caption">Flying Together</div>
+  </div>
+  <div class="gallery-item">
+    <img src="{% static 'bird3.jpg'%}" alt="Bird Image 3" />
+    <div class="caption">Bird on Tree</div>
+  </div>
+  <div class="gallery-item">
+    <img src="{% static 'bird4.jpg'%}" alt="Bird Image 4" />
+    <div class="caption">Flying Together</div>
+  </div>
+</section>
+{% endblock content %}
