@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Menu Section -->
+<section id="menu" class="container my-5">
+    <h2 class="text-center mb-4">Our Menu</h2>
+    <div class="row">
+        {% for meal in meals %}
+        <div class="col-md-4 mb-4">
+            <div class="card meal-card h-100">
+                <img src="{{ meal.strMealThumb }}" class="card-img-top" alt="{{ meal.strMeal }}">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">Food ID: {{ meal.idMeal }}</h6>
+                    <h5 class="card-title">{{ meal.strMeal }}</h5>
+                    <p class="card-text flex-grow-1">A delicious meal made with fresh ingredients and loaded with your favorite toppings.</p>
+                    <a href="https://www.themealdb.com/meal/{{ meal.idMeal }}" class="btn btn-primary mt-auto" target="_blank">Order Now</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">About Us</h2>
+        <p>We are Foodie Feast, a food company that offers delicious meals made from the freshest ingredients. Whether you're looking for a quick bite or a special meal for your event, we've got you covered. Our mission is to provide tasty, healthy, and affordable food for everyone.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="inquiry" class="form-label">Type of Inquiry</label>
+            <select class="form-select" id="inquiry" required>
+                <option value="">Select an option</option>
+                <option value="order">Order Inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="general">General Question</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+{% endblock content %}
